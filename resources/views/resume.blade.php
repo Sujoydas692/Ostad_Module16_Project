@@ -20,100 +20,65 @@
                         Download Resume
                     </a>
                 </div>
+
+                <?php foreach($experiences as $experience){ ?>
+
+
                 <!-- Experience Card 1-->
                 <div class="card shadow border-0 rounded-4 mb-5">
                     <div class="card-body p-5">
                         <div class="row align-items-center gx-5">
                             <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                 <div class="bg-light p-4 rounded-4">
-                                    <div class="text-primary fw-bolder mb-2">2019 - Present</div>
-                                    <div class="small fw-bolder">Web Developer</div>
-                                    <div class="small text-muted">Stark Industries</div>
-                                    <div class="small text-muted">Los Angeles, CA</div>
+                                    <div class="text-primary fw-bolder mb-2">{{ $experience['work_date'] }}</div>
+                                    <div class="small fw-bolder">{{ $experience['work_title'] }}</div>
+                                    <div class="small text-muted">{{ $experience['work_company'] }}</div>
+                                    <div class="small text-muted">{{ $experience['work_location'] }}</div>
                                 </div>
                             </div>
                             <div class="col-lg-8">
-                                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium,
-                                    voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed
-                                    aliquam non voluptate corrupti excepturi maxime porro fuga.</div>
+                                <div>{{ $experience['work_resposibilty'] }}</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Experience Card 2-->
-                <div class="card shadow border-0 rounded-4 mb-5">
-                    <div class="card-body p-5">
-                        <div class="row align-items-center gx-5">
-                            <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                <div class="bg-light p-4 rounded-4">
-                                    <div class="text-primary fw-bolder mb-2">2017 - 2019</div>
-                                    <div class="small fw-bolder">SEM Specialist</div>
-                                    <div class="small text-muted">Wayne Enterprises</div>
-                                    <div class="small text-muted">Gotham City, NY</div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium,
-                                    voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed
-                                    aliquam non voluptate corrupti excepturi maxime porro fuga.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <?php } ?>
+
             </section>
             <!-- Education Section-->
             <section>
                 <h2 class="text-secondary fw-bolder mb-4">Education</h2>
+
+                <?php foreach($educations as $education){ ?>
+
+
                 <!-- Education Card 1-->
                 <div class="card shadow border-0 rounded-4 mb-5">
                     <div class="card-body p-5">
                         <div class="row align-items-center gx-5">
                             <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                 <div class="bg-light p-4 rounded-4">
-                                    <div class="text-secondary fw-bolder mb-2">2015 - 2017</div>
+                                    <div class="text-secondary fw-bolder mb-2">{{ $education['passing_year'] }}</div>
                                     <div class="mb-2">
-                                        <div class="small fw-bolder">Barnett College</div>
-                                        <div class="small text-muted">Fairfield, NY</div>
+                                        <div class="small fw-bolder">{{ $education['institute'] }}</div>
+                                        <div class="small text-muted">{{ $education['institute_location'] }}</div>
                                     </div>
                                     <div class="fst-italic">
-                                        <div class="small text-muted">Master's</div>
-                                        <div class="small text-muted">Web Development</div>
+                                        <div class="small text-muted">{{ $education['degree'] }}</div>
+                                        <div class="small text-muted">{{ $education['degree_subject'] }}</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-lg-8">
-                                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium,
-                                    voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed
-                                    aliquam non voluptate corrupti excepturi maxime porro fuga.</div>
+                                <div>{{ $education['short_des'] }}</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- Education Card 2-->
-                <div class="card shadow border-0 rounded-4 mb-5">
-                    <div class="card-body p-5">
-                        <div class="row align-items-center gx-5">
-                            <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                <div class="bg-light p-4 rounded-4">
-                                    <div class="text-secondary fw-bolder mb-2">2011 - 2015</div>
-                                    <div class="mb-2">
-                                        <div class="small fw-bolder">ULA</div>
-                                        <div class="small text-muted">Los Angeles, CA</div>
-                                    </div>
-                                    <div class="fst-italic">
-                                        <div class="small text-muted">Undergraduate</div>
-                                        <div class="small text-muted">Computer Science</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-8">
-                                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium,
-                                    voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed
-                                    aliquam non voluptate corrupti excepturi maxime porro fuga.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                <?php } ?>
+                
             </section>
             <!-- Divider-->
             <div class="pb-5"></div>
